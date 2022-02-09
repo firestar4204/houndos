@@ -55,3 +55,6 @@ dkms.conf
 *.bin
 *.iso
 *.img
+
+# MacOS specific files
+.DS_Store
