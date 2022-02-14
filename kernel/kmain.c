@@ -1,16 +1,10 @@
-#include "../drivers/ports.h"
+#include "../drivers/screen.h"
+#include "../libc/string.h"
 
-void kmain(void) {
-	port_byte_out(0x3d4, 14);
-	int position = port_byte_in(0x3d5);
-	position = position << 8;
-
-	port_byte_out(0x3d4, 15);
-	position += port_byte_in(0x3d5);
-
-	int offset_from_vga = position * 2;
-
-	char *vga = 0xb8000;
-	vga[offset_from_vga] = 'X';
-	vga[offset_from_vga + 1] = 0x0f;
+void kmain()
+{
+	clear_screen();
+	kprint("Hi, new\nline.");
+	kprint("More new\nlines\nto\nfill\nup\nscreen\n\n\n\n\nmore new lines and other stuff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlets\nsee");
 }
+
