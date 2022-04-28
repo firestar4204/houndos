@@ -5,6 +5,8 @@ Just a little hobby thing to figure out how operating systems work.  I don't wan
 
 Using cfenollosa/os-tutorial for some source code.
 
+Sorry in advance for the way I use git.
+
 ## Building ##
 
 You will need `nasm`, `clang`, and `lldb` (if you want to debug).
