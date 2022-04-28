@@ -15,23 +15,23 @@ Run `make` to build, and `make run` or `make debug` to run.
 
 ## Features (Implemented and still TODO) ##
 
-[x] 1-stage bootloader capable of loading a kernel
-[x] 32-bit protected mode
-[x] Port I/O drivers
-[x] Screen drivers
-[x] memcpy() and various string functions (very basic libc)
-[ ] Interrupts (in progress)
-[ ] Keyboard drivers (in progress)
-[ ] FAT12/16/32 2-stage bootloader
-[ ] Disk drivers
-[ ] ELF parsing
-[ ] A very basic shell
+- [x] 1-stage bootloader capable of loading a kernel
+- [x] 32-bit protected mode
+- [x] Port I/O drivers
+- [x] Screen drivers
+- [x] memcpy() and various string functions (very basic libc)
+- [ ] Interrupts (in progress)
+- [ ] Keyboard drivers (in progress)
+- [ ] FAT12/16/32 2-stage bootloader
+- [ ] Disk drivers
+- [ ] ELF parsing
+- [ ] A very basic shell
 
 ### Far Future (Ambitious projects) ###
 
-[ ] Finish libc
-[ ] Maybe a text editor (port houndtext)
-[ ] Rewrite some basic GNU tools (coreutils)
+- [ ] Finish libc
+- [ ] Maybe a text editor (port houndtext)
+- [ ] Rewrite some basic GNU tools (coreutils)
 
 ## Contributing ##
 
