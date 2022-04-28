@@ -41,3 +41,5 @@ My work on this is on/off, because school and rowing.
 
 Anything is appreciated!
 
+#### A cut-off picture of Andy the hound ####
+<img src="./docs/1611671277683_4651693421818f874b0ec29f0da151b2.jpeg" alt="Andy the hound" width=500 />
