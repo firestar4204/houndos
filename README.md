@@ -27,7 +27,7 @@ Run `make` to build, and `make run` or `make debug` to run.
 - [ ] ELF parsing
 - [ ] A very basic shell
 
-### Far Future (Ambitious projects) ###
+### Far Future (Ambitious projects that probably won't happen) ###
 
 - [ ] Finish libc
 - [ ] Maybe a text editor (port houndtext)
