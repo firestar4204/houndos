@@ -1,9 +1,9 @@
-C_SOURCES = $(wildcard kernel/*.c drivers/*.c)
-HEADERS = $(wildcard kernel/*.h drivers/*.h)
+C_SOURCES = $(wildcard kernel/*.c drivers/*.c cpu/*.c libc/*.c)
+HEADERS = $(wildcard kernel/*.h drivers/*.h cpu/*.h libc/*.h)
 OBJ = ${C_SOURCES:.c=.o}
 
-CC = /opt/homebrew/bin/i686-elf-gcc
-GDB = /opt/homebrew/bin/i386-elf-gdb
+CC = i686-elf-gcc
+GDB = i386-elf-gdb
 CFLAGS = -g
 
 os-image.bin: boot/boot.bin kernel.bin
@@ -33,5 +33,5 @@ debug: os-image.bin kernel.elf
 
 clean:
 	rm -rf *.bin *.dis *.o os-image.bin *.elf
-	rm -rf kernel/*.o boot/*.bin drivers/*.o boot/*.o
+	rm -rf kernel/*.o boot/*.bin drivers/*.o boot/*.o libc/*.o
 
