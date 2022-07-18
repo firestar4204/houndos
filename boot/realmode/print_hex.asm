@@ -18,7 +18,7 @@ step2:
 	mov bx, HEX_OUT + 5
 	sub bx, cx
 	mov [bx], al
-	ror dx, 4
+	ror dx, 4 ; 0x1234 -> 0x4123 -> 0x3412 -> 0x2341 -> 0x1234
 	
 	add cx, 1
 	jmp hex_loop
