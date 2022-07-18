@@ -50,3 +50,6 @@
 
 # MacOS specific files
 .DS_Store
+
+# VSCode
+.vscode/
