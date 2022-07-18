@@ -1,8 +1,12 @@
 #include "../drivers/screen.h"
-#include "../libc/string.h"
+#include "../cpu/isr.h"
 
 void kmain()
 {
-	kprint("Kernel entered.  Welcome to HoundOS.\n");
+	clear_screen();
+	kprint("Kernel entered.\n");
+	isr_install();
+	kprint("Interrupts loaded.\n");
+	kprint("Welcome to HoundOS.\n");
 }
 
