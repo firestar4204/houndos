@@ -20,7 +20,7 @@ Run `make` to build, and `make run` or `make debug` to run.
 - [x] Port I/O drivers
 - [x] Screen drivers
 - [x] memcpy() and various string functions (very basic libc)
-- [x] Interrupts (in progress)
+- [x] Interrupts
 - [ ] Keyboard drivers (in progress)
 - [ ] FAT12/16/32 2-stage bootloader
 - [ ] Disk drivers
