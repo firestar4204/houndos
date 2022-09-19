@@ -80,20 +80,20 @@ int print_char(char c, int col, int row, char attr)
 
 int get_cursor_offset()
 {
-	port_byte_out(REG_SCREEN_CTRL, 14);
-	int offset = port_byte_in(REG_SCREEN_DATA) << 8;
-	port_byte_out(REG_SCREEN_CTRL, 15);
-	offset += port_byte_in(REG_SCREEN_DATA);
+	outb(REG_SCREEN_CTRL, 14);
+	int offset = inb(REG_SCREEN_DATA) << 8;
+	outb(REG_SCREEN_CTRL, 15);
+	offset += inb(REG_SCREEN_DATA);
 	return offset * 2;
 }
 
 void set_cursor_offset(int offset)
 {
 	offset /= 2;
-	port_byte_out(REG_SCREEN_CTRL, 14);
-	port_byte_out(REG_SCREEN_DATA, (unsigned char)(offset << 8));
-	port_byte_out(REG_SCREEN_CTRL, 15);
-	port_byte_out(REG_SCREEN_DATA, (unsigned char)(offset & 0xff));
+	outb(REG_SCREEN_CTRL, 14);
+	outb(REG_SCREEN_DATA, (unsigned char)(offset << 8));
+	outb(REG_SCREEN_CTRL, 15);
+	outb(REG_SCREEN_DATA, (unsigned char)(offset & 0xff));
 }
 
 void clear_screen()
