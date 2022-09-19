@@ -9,7 +9,7 @@ Sorry in advance for the way I use git.
 
 ## Building ##
 
-You will need `nasm`, `clang`, and `lldb` (if you want to debug).
+You will need `nasm`, `i686-elf-gcc`, and `i386-elf-gdb` (if you want to debug).
 
 Run `make` to build, and `make run` or `make debug` to run.
 
