@@ -22,8 +22,8 @@ Run `make` to build, and `make run` or `make debug` to run.
 - [x] memcpy() and various string functions (very basic libc)
 - [x] Interrupts
 - [ ] Keyboard drivers (in progress)
-- [ ] FAT12/16/32 2-stage bootloader
-- [ ] Disk drivers
+- [ ] Floppy drivers (in progress)
+- [ ] FAT12 support
 - [ ] ELF parsing
 - [ ] A very basic shell
 
