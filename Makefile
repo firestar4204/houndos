@@ -6,13 +6,13 @@ CC = i686-elf-gcc
 GDB = i386-elf-gdb
 CFLAGS = -g
 
-os-image.bin: boot/boot.bin kernel.bin
+os-image.bin: boot/houndboot/boot.bin kernel.bin
 	cat $^ > os-image.bin
 
-kernel.bin: boot/kernel_entry.o ${OBJ}
+kernel.bin: boot/houndboot/kernel_entry.o ${OBJ}
 	i686-elf-ld -o $@ -Ttext 1000 $^ --oformat binary
 
-kernel.elf: boot/kernel_entry.o ${OBJ}
+kernel.elf: boot/houndboot/kernel_entry.o ${OBJ}
 	i686-elf-ld -o $@ -Ttext 1000 $^
 
 run: os-image.bin

@@ -24,7 +24,7 @@ disk_error:
 	call print
 	call print_nl
 	mov dh, ah
-	call print_hex
+	;call print_hex
 	jmp disk_loop
 
 sectors_error:
