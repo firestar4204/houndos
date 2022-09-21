@@ -6,8 +6,14 @@ CC = i686-elf-gcc
 GDB = i386-elf-gdb
 CFLAGS = -g
 
-os-image.bin: boot/houndboot/boot.bin kernel.bin
-	cat $^ > os-image.bin
+all: os.img
+
+os.img: os.bin
+	dd if=/dev/zero of=os.img bs=512 count=2880
+	dd if=os.bin of=os.img conv=notrunc
+
+os.bin: boot/houndboot/boot.bin kernel.bin
+	cat $^ > os.bin
 
 kernel.bin: boot/houndboot/kernel_entry.o ${OBJ}
 	i686-elf-ld -o $@ -Ttext 1000 $^ --oformat binary
@@ -15,11 +21,11 @@ kernel.bin: boot/houndboot/kernel_entry.o ${OBJ}
 kernel.elf: boot/houndboot/kernel_entry.o ${OBJ}
 	i686-elf-ld -o $@ -Ttext 1000 $^
 
-run: os-image.bin
-	qemu-system-i386 -fda os-image.bin
+run: os.img
+	qemu-system-i386 -fda os.img
 
-debug: os-image.bin kernel.elf
-	qemu-system-i386 -s -fda os-image.bin &
+debug: os.img kernel.elf
+	qemu-system-i386 -s -fda os.img &
 	${GDB} -ex "target remote localhost:1234" -ex "symbol-file kernel.elf"
 
 %.o: %.c ${HEADERS}
@@ -32,6 +38,6 @@ debug: os-image.bin kernel.elf
 	nasm $< -f bin -o $@
 
 clean:
-	rm -rf *.bin *.dis *.o os-image.bin *.elf
+	rm -rf *.bin *.dis *.o os.bin os.img *.elf
 	rm -rf kernel/*.o boot/*.bin drivers/*.o boot/*.o libc/*.o cpu/*.o
 
