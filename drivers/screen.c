@@ -9,7 +9,7 @@ int get_offset(int col, int row);
 int get_offset_row(int offset);
 int get_offset_col(int offset);
 
-void kprint_at(char *message, int col, int row)
+void printk_at(char *message, int col, int row)
 {
 	int offset;
 	if (col >= 0 && row >= 0)
@@ -28,9 +28,9 @@ void kprint_at(char *message, int col, int row)
 	}
 }
 
-void kprint(char *message)
+void printk(char *message)
 {
-	kprint_at(message, -1, -1);
+	printk_at(message, -1, -1);
 }
 
 int print_char(char c, int col, int row, char attr)
