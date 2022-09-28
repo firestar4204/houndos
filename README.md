@@ -25,6 +25,7 @@ Run `make` to build, and `make run` or `make debug` to run.
 - [ ] Floppy drivers (in progress)
 - [ ] FAT12 support
 - [ ] ELF parsing
+- [ ] Scheduler
 - [ ] A very basic shell
 
 ### Far Future (Ambitious projects that probably won't happen) ###
