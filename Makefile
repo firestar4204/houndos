@@ -22,7 +22,7 @@ kernel.elf: boot/houndboot/kernel_entry.o ${OBJ}
 	i686-elf-ld -o $@ -Ttext 1000 $^
 
 run: os.img
-	qemu-system-i386 -fda os.img
+	qemu-system-i386 -drive file=os.img,if=floppy,format=raw
 
 debug: os.img kernel.elf
 	qemu-system-i386 -s -fda os.img &
