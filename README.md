@@ -24,6 +24,8 @@ Run `make` to build, and `make run` or `make debug` to run.
 - [ ] Keyboard drivers (in progress)
 - [ ] Floppy drivers (in progress)
 - [ ] FAT12 support
+- [ ] ATAPI drivers
+- [ ] ISO 9660
 - [ ] ELF parsing
 - [ ] Scheduler
 - [ ] A very basic shell
