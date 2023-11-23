@@ -15,6 +15,7 @@ void kmain()
 	printk("Interrupts loaded.\n");
 	init_timer(10);
 	printk("Timer started\n");
+	printk("Detecting floppy drives...\n");
+	floppy_detect_drives();
 	printk("Welcome to HoundOS.\n");
 }
-
