@@ -38,4 +38,8 @@ extern const char *drive_types[];
 
 void floppy_detect_drives();
 
+void floppy_write_cmd(int base, char cmd);
+
+unsigned char floppy_read_data(int base);
+
 #endif
